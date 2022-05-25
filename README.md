@@ -1,11 +1,11 @@
-# nodejs-posgresql
+# Postgresql CRUDL Rest API
 
-A demo Quotes REST API using Node.js and PostgreSQL. Built with Express Js for this [Node.js PostgreSQL tutorial](https://geshan.com.np/blog/2021/01/nodejs-postgresql-tutorial/).
-
+Quotes REST API using Node.js and PostgreSQL. Inspired from: [Node.js PostgreSQL tutorial](https://geshan.com.np/blog/2021/01/nodejs-postgresql-tutorial/).
 
 ## Example Usage
 
 **(C)REATE**
+
 ```shell
 curl -i -XPOST "http://localhost:3000/quotes" \
     -H "Content-Type: application/json" \

@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const quotes = require('../services/quotes');
+const bodyParser = require('body-parser')
+
+router.use(express.urlencoded({ extended: true }))
+router.use(express.json())
 
 /* LIST quotes listing. */
 router.get('/', async function(req, res, next) {
@@ -25,6 +29,9 @@ router.get('/:quote_id', async function(req, res, next) {
 
 /* POST quotes */
 router.post('/', async function(req, res, next) {
+  console.log(req)
+  console.log("\n\n\n")
+  console.log(req.body)
   try {
     res.json(await quotes.create(req.body));
   } catch (err) {
